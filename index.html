@@ -40,27 +40,41 @@
 
                 <div class="card__campo">
                     <label class= "card__campo__label" for="Edad">Edad</label>
-                    <input class= "card__campo__input" type="text" id="edadInput">
+                    <input class= "card__campo__input" type="number" id="edadInput">
                 </div>
 
                 <div class="card__campo">
                     <label class= "card__campo__label" for="Sexo">Sexo</label>
-                    <input class= "card__campo__input" type="text" id="sexoInput">
+                    <select name="sexo" id="sexoInput" size="2">
+                           <option value="masculino">Masculino</option>
+                           <option value="femenino">Femenino</option>
+                    </select>
                 </div>
 
                 <div class="card__campo">
                     <label class= "card__campo__label" for="temas_de_interes">Temas de Interés</label>
-                    <input class= "card__campo__input" type="text" id="temas_de_interesInput">
+                    <select  id="temas_de_interesInput" size="5" multiple>
+                           <option value="deporte">Deporte</option>
+                           <option value="musica">Música</option>
+                           <option value="juegos">Juegos</option>
+                           <option value="tecnologia">Tecnología</option>
+                           <option value="otros">Otros</option>
+                    </select>
                 </div>
 
                 <div class="card__campo">
                     <label class= "card__campo__label" for="Pais">País</label>
-                    <input class= "card__campo__input" type="text" id="paisInput">
+                    <select class= "card__campo__input" id="paisInput">
+                        <option value="argentina">Argentina</option>
+                        <option value="chile">Chile</option>
+                        <option value="brasil">Brasil</option>
+                        <option value="uruguay">Uruguay</option>
+                    </select>
                 </div>
 
                 <div class="card__campo">
                     <label class= "card__campo__label" for="comentario">Comentario</label>
-                    <input class= "card__campo__input" type="text" id="comentarioInput">
+                    <textarea class= "card__campo__input" type="text" id="comentarioInput"></textarea>
                 </div>
         
                 <div class="card__button">
