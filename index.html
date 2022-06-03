@@ -20,13 +20,54 @@
                 <a href="#">Sobre Nosotros</a>
             </nav>
     
-            <div class="card">
-                <h2>Formulario de Registro</h2>
+            <form class="card">
+                <h2 class="card__title">Formulario de Registro</h2>
+        
+                <div class="card__campo">
+                    <label class= "card__campo__label" for="Nombre">Nombre</label>
+                    <input class= "card__campo__input" type="text" id="nombreInput">
+                </div>
+        
+                <div class="card__campo">
+                    <label class= "card__campo__label" for="Apellido">Apellido</label>
+                    <input class= "card__campo__input" type="text" id="apellidoInput">
+                </div>
 
-                <form>
+                <div class="card__campo">
+                    <label class= "card__campo__label" for="Email">Email</label>
+                    <input class= "card__campo__input" type="text" id="emailInput">
+                </div>
 
-                </form>
-            </div>
+                <div class="card__campo">
+                    <label class= "card__campo__label" for="Edad">Edad</label>
+                    <input class= "card__campo__input" type="text" id="edadInput">
+                </div>
+
+                <div class="card__campo">
+                    <label class= "card__campo__label" for="Sexo">Sexo</label>
+                    <input class= "card__campo__input" type="text" id="sexoInput">
+                </div>
+
+                <div class="card__campo">
+                    <label class= "card__campo__label" for="temas_de_interes">Temas de Interés</label>
+                    <input class= "card__campo__input" type="text" id="temas_de_interesInput">
+                </div>
+
+                <div class="card__campo">
+                    <label class= "card__campo__label" for="Pais">País</label>
+                    <input class= "card__campo__input" type="text" id="paisInput">
+                </div>
+
+                <div class="card__campo">
+                    <label class= "card__campo__label" for="comentario">Comentario</label>
+                    <input class= "card__campo__input" type="text" id="comentarioInput">
+                </div>
+        
+                <div class="card__button">
+                    <button onclick="validarInputs(); return false;">Enviar</button>
+                </div>
+
+            </form>
         </section>
     
         <footer>
