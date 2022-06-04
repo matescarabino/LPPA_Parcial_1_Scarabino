@@ -26,21 +26,25 @@
                 <div class="card__campo">
                     <label class= "card__campo__label" for="Nombre">Nombre</label>
                     <input class= "card__campo__input" type="text" id="nombreInput">
+                    <div class= "card__campo__error" id="errorNombre" ></div>
                 </div>
         
                 <div class="card__campo">
                     <label class= "card__campo__label" for="Apellido">Apellido</label>
                     <input class= "card__campo__input" type="text" id="apellidoInput">
+                    <div class= "card__campo__error" id="errorApellido" ></div>
                 </div>
 
                 <div class="card__campo">
                     <label class= "card__campo__label" for="Email">Email</label>
                     <input class= "card__campo__input" type="text" id="emailInput">
+                    <div class= "card__campo__error" id="errorMail" ></div> 
                 </div>
 
                 <div class="card__campo">
                     <label class= "card__campo__label" for="Edad">Edad</label>
                     <input class= "card__campo__input" type="number" id="edadInput">
+                    <div class= "card__campo__error" id="errorEdad" ></div>
                 </div>
 
                 <div class="card__campo">
@@ -51,45 +55,53 @@
                             <option value="femenino">Femenino</option>
                         </select>
                     </div>
+                    <!-- para cuando no selecciona nada -->
+                    <div class= "card__campo__error" id="errorSexo" ></div>
                 </div>
 
                 <!-- Temas de Interés -->
 
                 <div class="card__campo">
-                    <label class= "card__campo__label">Temas de Interés</label>
+                    <label class="card__campo__label">Temas de Interés</label>
                     <div class="card__checkbox">
                         <div class="card__campo_checkbox">
                             <input class="card__campo__input_checkbox" type="checkbox" id="temas_de_interesInput" value="deporte">
-                            <label class= "card__campo__label_checkbox" for="deporte">Deporte</label>
+                            <label class="card__campo__label_checkbox" for="deporte">Deporte</label>
                         </div>
                         <div class="card__campo_checkbox">
                             <input class="card__campo__input_checkbox" type="checkbox" id="temas_de_interesInput" value="musica">
-                            <label class= "card__campo__label_checkbox" for="musica">Música</label>
+                            <label class="card__campo__label_checkbox" for="musica">Música</label>
                         </div>
                         <div class="card__campo_checkbox">
                             <input class="card__campo__input_checkbox" type="checkbox" id="temas_de_interesInput" value="juegos">
-                            <label class= "card__campo__label_checkbox" for="juegos">Juegos</label>
+                            <label class="card__campo__label_checkbox" for="juegos">Juegos</label>
                         </div>
                         <div class="card__campo_checkbox">
                             <input class="card__campo__input_checkbox" type="checkbox" id="temas_de_interesInput" value="tecnologia">
-                            <label class= "card__campo__label_checkbox" for="tecnologia">Tecnología</label>
+                            <label class="card__campo__label_checkbox" for="tecnologia">Tecnología</label>
                         </div>
                         <div class="card__campo_checkbox">
                             <input class="card__campo__input_checkbox" type="checkbox" id="temas_de_interesInput" value="otros">
-                            <label class= "card__campo__label_checkbox" for="otros">Otros</label>
+                            <label class="card__campo__label_checkbox" for="otros">Otros</label>
                         </div>
-
+                        <div class="card__campo_checkbox">
+                            <label class="card__campo__label_checkbox" for="."></label>
+                        </div>
                     </div>
+                    <!-- para cuando no selecciona nada -->
+                    <div class="card__campo__error" id="errorTemas"></div>
                 </div>
 
                 <div class="card__campo">
-                    <label class= "card__campo__label" for="Pais">País</label>
-                    <select class= "card__campo__input" id="paisInput">
+                    <label class="card__campo__label" for="Pais">País</label>
+                    <select class="card__campo__input" id="paisInput">
                         <option value="argentina">Argentina</option>
                         <option value="chile">Chile</option>
                         <option value="brasil">Brasil</option>
                         <option value="uruguay">Uruguay</option>
                     </select>
+                    <!-- para cuando no selecciona nada -->
+                    <div class="card__campo__error" id="errorPais"></div>
                 </div>
 
                 <div class="card__campo">

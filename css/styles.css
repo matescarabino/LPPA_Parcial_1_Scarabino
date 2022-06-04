@@ -212,6 +212,19 @@ footer {
     background: #6a9cde;
 }
 
+/*--------------------validaciones---------------------------*/
+.invalid {
+    border-color: red;
+}
+
+#errorNombre,
+#errorApellido,
+#errorMail,
+#errorEdad
+{
+    color: red
+}
+
 /*==================Tablet - Escritorio==================*/
 @media (min-width: 768px) {
 
