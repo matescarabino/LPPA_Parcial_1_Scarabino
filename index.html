@@ -45,21 +45,41 @@
 
                 <div class="card__campo">
                     <label class= "card__campo__label" for="Sexo">Sexo</label>
-                    <select name="sexo" id="sexoInput" size="2">
-                           <option value="masculino">Masculino</option>
-                           <option value="femenino">Femenino</option>
-                    </select>
+                    <div class="card__campo__options">
+                        <select name="sexo" id="sexoInput" size="2">
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                        </select>
+                    </div>
                 </div>
 
+                <!-- Temas de Interés -->
+
                 <div class="card__campo">
-                    <label class= "card__campo__label" for="temas_de_interes">Temas de Interés</label>
-                    <select  id="temas_de_interesInput" size="5" multiple>
-                           <option value="deporte">Deporte</option>
-                           <option value="musica">Música</option>
-                           <option value="juegos">Juegos</option>
-                           <option value="tecnologia">Tecnología</option>
-                           <option value="otros">Otros</option>
-                    </select>
+                    <label class= "card__campo__label">Temas de Interés</label>
+                    <div class="card__checkbox">
+                        <div class="card__campo_checkbox">
+                            <input class="card__campo__input_checkbox" type="checkbox" id="temas_de_interesInput" value="deporte">
+                            <label class= "card__campo__label_checkbox" for="deporte">Deporte</label>
+                        </div>
+                        <div class="card__campo_checkbox">
+                            <input class="card__campo__input_checkbox" type="checkbox" id="temas_de_interesInput" value="musica">
+                            <label class= "card__campo__label_checkbox" for="musica">Música</label>
+                        </div>
+                        <div class="card__campo_checkbox">
+                            <input class="card__campo__input_checkbox" type="checkbox" id="temas_de_interesInput" value="juegos">
+                            <label class= "card__campo__label_checkbox" for="juegos">Juegos</label>
+                        </div>
+                        <div class="card__campo_checkbox">
+                            <input class="card__campo__input_checkbox" type="checkbox" id="temas_de_interesInput" value="tecnologia">
+                            <label class= "card__campo__label_checkbox" for="tecnologia">Tecnología</label>
+                        </div>
+                        <div class="card__campo_checkbox">
+                            <input class="card__campo__input_checkbox" type="checkbox" id="temas_de_interesInput" value="otros">
+                            <label class= "card__campo__label_checkbox" for="otros">Otros</label>
+                        </div>
+
+                    </div>
                 </div>
 
                 <div class="card__campo">

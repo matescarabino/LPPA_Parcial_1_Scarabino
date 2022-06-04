@@ -116,25 +116,60 @@ section {
 
 .card__campo {
     display: flex;
-    flex-direction: column;
-    justify-content: end;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 70%;
+}
+.card__campo__options{
+    display: flex;
+    justify-content: center;
     width: 100%;
-    margin-top: 15px;
+    border: 2px solid #76b900;
+}
+.card__campo__options option {
+    width: 2000px;/*lo hago de esta manera para que se amolde a la caja que lo contiene*/
+}
 
+.card__checkbox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    border: 2px solid #76b900;
+}
+.card__campo_checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    width: 40%;
+    margin-top: 5px;
 }
 
 .card__campo__label {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width: 100%;
+    margin-top: 15px;
+}
+
+.card__campo__label_checkbox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
 }
 
 .card__campo__input {
     height: 20px;
-    width: 70%;
-    margin-left: 15%;
+    width: 100%;
     border: 2px solid #76b900;
+}
+.card__campo__input_checkbox {
+    height: 15px;
+    width: 15px;
 }
 
 .card__button button {
