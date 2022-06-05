@@ -1,5 +1,5 @@
 window.onload = function() {
-
+};
 
 
     //Validacion Nombre --------------------------------------------------------------------
@@ -38,8 +38,8 @@ window.onload = function() {
         }
     };
 
-    //Validacion Mail ------------------------------------------------------------------------
-    let mail = document.getElementById('mailInput');
+    // Validacion Mail ------------------------------------------------------------------------
+    let mail = document.getElementById('emailInput');
     let mail_format = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
 
     mail.onblur = function () {
@@ -59,9 +59,10 @@ window.onload = function() {
 
     //Validacion Edad ----------------------------------------------------------
     let edad = document.getElementById('edadInput');
+    let age_format = /^-?\d*(\.\d+)?$/;
 
     edad.onblur = function () {
-        if ((edad.value > 0) || (edad.value < 100))
+        if (!(edad.value.match(age_format)) || (edad.value > 0) || (edad.value < 100))
         {
             edad.classList.add('invalid');
             errorEdad.innerHTML = 'Ingrese un numero entero mayor a 0 y menor a 100.'
@@ -75,51 +76,62 @@ window.onload = function() {
     };
 
 
-
-    function validarInputs() {
-
-
-
-
-
-
+//Validacion sexo ----------------------------------------------------------
+document.formulario.onsubmit = function () {
+    if (this.sexo[0].checked == false && this.sexo[1].checked == false && this.sexo[2].checked == false) {
+        document.getElementById('sexoInput').classList.add('invalid');
+        errorSexo.innerHTML = 'Seleccione una opcion.'
+        return false;
+    }
+    else {
+        document.getElementById('sexoInput').classList.remove('invalid');
+        errorSexo.innerHTML = "";
     }
 
+//Validacion interes ----------------------------------------------------------
+
+    // if(this.interes[0].value==null && this.interes[1].value==null){
+    //     document.getElementById('temas_de_interesInput').classList.add('invalid');
+    //     errorInteres.innerHTML = 'Seleccione una opcion.'
+    //     return false;
+    // }
+    // else{
+    //     document.getElementById('temas_de_interesInput').classList.remove('invalid');
+    //     errorInteres.innerHTML = "";
+    // }
+
+    alert(document.getElementById('temas_de_interesInput_Deporte'))
+
+    // if(document.getElementById('temas_de_interesInput_Deporte'))
+
+
+}
+
+
+//     //Validacion Pais ----------------------------------------------------------
+//     let pais = document.getElementById('paisInput').value;
+
+//     pais.onblur = function () {
+//         if (pais.length <= 0) {
+//             pais.classList.add('invalid');
+//             errorPais.innerHTML = 'Seleccione una opcion.'
+//         }
+//     };
+//     pais.onfocus = function () {
+//         if (pais.classList.contains('invalid')) {
+//             pais.classList.remove('invalid');
+//             errorPais.innerHTML = "";
+//         }
+
+
+
+function validarInputs() {
+
+
+}
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-};
