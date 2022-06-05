@@ -47,8 +47,7 @@
                     <div class= "card__campo__error" id="errorEdad" ></div>
                 </div>
 
-
-
+                <!-- Sexo -->
 
                 <div class="card__campo">
                     <label class="card__campo__label" for="Sexo">Sexo</label>
@@ -60,19 +59,14 @@
                             <input type="radio" name="sexo" value="Otros"> 
                             <label class="card__campo__label_checkbox">Otros</label>
                     </div>
-                    <!-- para cuando no selecciona nada -->
                     <div class="card__campo__error" id="errorSexo"></div>
                 </div>
-
-
-
-
 
                 <!-- Temas de Interés -->
 
                 <div class="card__campo">
                     <label class="card__campo__label">Temas de Interés</label>
-                    <div class="card__checkbox" id="temasInput">
+                    <div class="card__checkbox" id="contenedorTemas">
                         <div class="card__campo_checkbox">
                             <input class="card__campo__input_checkbox" name="interes" type="checkbox" id="temas_de_interesInput_Deporte" value="deporte">
                             <label class="card__campo__label_checkbox" for="deporte">Deporte</label>
@@ -97,19 +91,20 @@
                             <label class="card__campo__label_checkbox" for="."></label>
                         </div>
                     </div>
-                    <!-- para cuando no selecciona nada -->
                     <div class="card__campo__error" id="errorTemas"></div>
                 </div>
 
+                <!-- Pais -->
+
                 <div class="card__campo">
-                    <label class="card__campo__label" for="Pais">País</label>
+                    <label class="card__campo__label" id="s" for="Pais">País</label>
                     <select class="card__campo__input" id="paisInput">
+                        <option value="" selected disabled>-- Elije un País --</option>
                         <option value="argentina">Argentina</option>
                         <option value="chile">Chile</option>
                         <option value="brasil">Brasil</option>
                         <option value="uruguay">Uruguay</option>
                     </select>
-                    <!-- para cuando no selecciona nada -->
                     <div class="card__campo__error" id="errorPais"></div>
                 </div>
 
@@ -122,9 +117,6 @@
                     <button>Submit</button>
                 </div>
         
-                <!-- <div class="card__button">
-                    <button onclick="validarInputs(); return false;">Calcular</button>
-                </div> -->
             </form>
 
         </section>

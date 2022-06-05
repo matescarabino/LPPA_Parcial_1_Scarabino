@@ -1,5 +1,5 @@
 window.onload = function() {
-};
+
 
 
     //Validacion Nombre --------------------------------------------------------------------
@@ -69,54 +69,55 @@ window.onload = function() {
         }
     };
     edad.onfocus = function () {
-        if (edad.classList.contains('invalid')) {
+        if (edad.classList.contains('invalid')) 
+        {
             edad.classList.remove('invalid');
             errorEdad.innerHTML = "";
         }
     };
 
 
+document.formulario.onsubmit = function () {
+
     //Validacion sexo ----------------------------------------------------------
-    document.formulario.onsubmit = function () {
-        if (this.sexo[0].checked == false && this.sexo[1].checked == false && this.sexo[2].checked == false) {
-            document.getElementById('sexoInput').classList.add('invalid');
-            errorSexo.innerHTML = 'Seleccione una opcion.'
-            return false;
-        }
-        else {
-            document.getElementById('sexoInput').classList.remove('invalid');
-            errorSexo.innerHTML = "";
-        }
+    if (this.sexo[0].checked == false && this.sexo[1].checked == false && this.sexo[2].checked == false) 
+    {
+        document.getElementById('sexoInput').classList.add('invalid');
+        errorSexo.innerHTML = 'Seleccione una opcion.'
+        return false;
+    }
+    else {
+        document.getElementById('sexoInput').classList.remove('invalid');
+        errorSexo.innerHTML = "";
+    }
 
-//Validacion interes ----------------------------------------------------------
-
-    // if(this.interes[0].value==null && this.interes[1].value==null){
-    //     document.getElementById('temas_de_interesInput').classList.add('invalid');
-    //     errorInteres.innerHTML = 'Seleccione una opcion.'
-    //     return false;
-    // }
-    // else{
-    //     document.getElementById('temas_de_interesInput').classList.remove('invalid');
-    //     errorInteres.innerHTML = "";
-    // }
-
-    if((document.getElementById('temas_de_interesInput_Deporte').checked == false)
+    //Validacion interes ----------------------------------------------------------
+    if ((document.getElementById('temas_de_interesInput_Deporte').checked == false)
         && (document.getElementById('temas_de_interesInput_Musica').checked == false)
         && (document.getElementById('temas_de_interesInput_Juegos').checked == false)
         && (document.getElementById('temas_de_interesInput_Tecnologia').checked == false)
         && (document.getElementById('temas_de_interesInput_Otros').checked == false)
-    ){
-        document.getElementById('temasInput').classList.add('invalid');
+    ) {
+        document.getElementById('contenedorTemas').classList.add('invalid');
         errorTemas.innerHTML = 'Seleccione por lo menos una opcion.'
         return false;
     }
     else {
-        document.getElementById('temasInput').classList.remove('invalid');
+        document.getElementById('contenedorTemas').classList.remove('invalid');
         errorTemas.innerHTML = "";
     }
 
-    // if(document.getElementById('temas_de_interesInput_Deporte'))
-
+    //Validacion Pais ----------------------------------------------------------
+    if(document.getElementById('paisInput').value=="")
+    {
+        document.getElementById('paisInput').classList.add('invalid');
+        errorPais.innerHTML = 'Seleccione un país.'
+        return false;
+    }
+    else{
+        document.getElementById('paisInput').classList.remove('invalid');
+        errorSexo.innerHTML = "";
+    }
 
 }
 
@@ -136,14 +137,7 @@ window.onload = function() {
 //             errorPais.innerHTML = "";
 //         }
 
-
-
-function validarInputs() {
-
-
-}
-
-
+};
 
 
 
