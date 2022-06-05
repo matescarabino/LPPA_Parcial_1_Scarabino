@@ -76,17 +76,17 @@ window.onload = function() {
     };
 
 
-//Validacion sexo ----------------------------------------------------------
-document.formulario.onsubmit = function () {
-    if (this.sexo[0].checked == false && this.sexo[1].checked == false && this.sexo[2].checked == false) {
-        document.getElementById('sexoInput').classList.add('invalid');
-        errorSexo.innerHTML = 'Seleccione una opcion.'
-        return false;
-    }
-    else {
-        document.getElementById('sexoInput').classList.remove('invalid');
-        errorSexo.innerHTML = "";
-    }
+    //Validacion sexo ----------------------------------------------------------
+    document.formulario.onsubmit = function () {
+        if (this.sexo[0].checked == false && this.sexo[1].checked == false && this.sexo[2].checked == false) {
+            document.getElementById('sexoInput').classList.add('invalid');
+            errorSexo.innerHTML = 'Seleccione una opcion.'
+            return false;
+        }
+        else {
+            document.getElementById('sexoInput').classList.remove('invalid');
+            errorSexo.innerHTML = "";
+        }
 
 //Validacion interes ----------------------------------------------------------
 
@@ -100,7 +100,20 @@ document.formulario.onsubmit = function () {
     //     errorInteres.innerHTML = "";
     // }
 
-    alert(document.getElementById('temas_de_interesInput_Deporte'))
+    if((document.getElementById('temas_de_interesInput_Deporte').checked == false)
+        && (document.getElementById('temas_de_interesInput_Musica').checked == false)
+        && (document.getElementById('temas_de_interesInput_Juegos').checked == false)
+        && (document.getElementById('temas_de_interesInput_Tecnologia').checked == false)
+        && (document.getElementById('temas_de_interesInput_Otros').checked == false)
+    ){
+        document.getElementById('temasInput').classList.add('invalid');
+        errorTemas.innerHTML = 'Seleccione por lo menos una opcion.'
+        return false;
+    }
+    else {
+        document.getElementById('temasInput').classList.remove('invalid');
+        errorTemas.innerHTML = "";
+    }
 
     // if(document.getElementById('temas_de_interesInput_Deporte'))
 
