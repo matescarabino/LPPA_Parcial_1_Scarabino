@@ -44,8 +44,7 @@ window.onload = function () {
         let mail_format = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
 
         mail.onblur = function () {
-            if (!mail.value.match(mail_format)
-            ) {
+            if (!mail.value.match(mail_format)) {
                 mail.classList.add('invalid');
                 errorMail.innerHTML = 'Ingrese un email valido.'
             }
@@ -74,10 +73,28 @@ window.onload = function () {
                 errorEdad.innerHTML = "";
             }
         };
+        
+        //Validacion Sexo ----------------------------------------------------------
+        let y = document.getElementById('sexo');
+        console.log(y)
+        y.addEventListener('change', function(){
+            document.getElementById('sexoInput').classList.remove('invalid');
+            errorSexo.innerHTML = "";
+        })
+
+        //Validacion Sexo ----------------------------------------------------------
+        // let x = document.querySelector('.card__campo__input_checkbox:checked');
+        // x.addEventListener('change', function(){
+        // document.getElementById('sexoInput').classList.remove('invalid');
+        // errorSexo.innerHTML = "";
+        // })
+
     }
 
 
-    //Validaciones on summit --------------------------------------------------------------------
+
+
+    //Validaciones on Submit --------------------------------------------------------------------
     document.formulario.onsubmit = function () {
 
 
@@ -85,19 +102,27 @@ window.onload = function () {
         let nombre = document.getElementById('nombreInput');
         let name_format = /^[a-zA-Z]+$/;
 
-        if ((nombre.value.length < 3) || (!nombre.value.match(name_format) || (nombre.value == ""))
-        ) {
+        if ((nombre.value.length < 3) || (!nombre.value.match(name_format) || (nombre.value == ""))) {
             nombre.classList.add('invalid');
             errorNombre.innerHTML = 'Ingrese un nombre no menor a 3 letras.'
             return false;
+        }
+
+        //Validacion sexo ----------------------------------------------------------
+        if (formulario.sexo[0].checked == false && formulario.sexo[1].checked == false && formulario.sexo[2].checked == false) {
+            document.getElementById('sexoInput').classList.add('invalid');
+            errorSexo.innerHTML = 'Seleccione una opcion.';
+            return false;
+        } else {
+            document.getElementById('sexoInput').classList.remove('invalid');
+            errorSexo.innerHTML = "";
         }
 
         //Validacion Apellido --------------------------------------------------------------------
         let apellido = document.getElementById('apellidoInput');
         let surname_format = /^[a-zA-Z]+$/;
 
-        if ((apellido.value.length < 3) || (!apellido.value.match(surname_format) || (apellido.value == ""))
-        ) {
+        if ((apellido.value.length < 3) || (!apellido.value.match(surname_format) || (apellido.value == ""))) {
             apellido.classList.add('invalid');
             errorApellido.innerHTML = 'Ingrese un apellido no menor a 3 letras.'
             return false;
@@ -107,8 +132,7 @@ window.onload = function () {
         let mail = document.getElementById('emailInput');
         let mail_format = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
 
-        if (!mail.value.match(mail_format) || (mail.value == "")
-        ) {
+        if (!mail.value.match(mail_format) || (mail.value == "")) {
             mail.classList.add('invalid');
             errorMail.innerHTML = 'Ingrese un email valido.';
             return false;
@@ -125,47 +149,32 @@ window.onload = function () {
             return false;
         }
 
-        //Validacion sexo ----------------------------------------------------------
-        if (this.sexo[0].checked == false && this.sexo[1].checked == false && this.sexo[2].checked == false) {
-            document.getElementById('sexoInput').classList.add('invalid');
-            errorSexo.innerHTML = 'Seleccione una opcion.'
-            return false;
-        }
-        else {
-            document.getElementById('sexoInput').classList.remove('invalid');
-            errorSexo.innerHTML = "";
-        }
+
 
         //Validacion interes ----------------------------------------------------------
-        if ((document.getElementById('temas_de_interesInput_Deporte').checked == false)
-            && (document.getElementById('temas_de_interesInput_Musica').checked == false)
-            && (document.getElementById('temas_de_interesInput_Juegos').checked == false)
-            && (document.getElementById('temas_de_interesInput_Tecnologia').checked == false)
-            && (document.getElementById('temas_de_interesInput_Otros').checked == false)
-        ) {
+
+        if (document.querySelector('.card__campo__input_checkbox:checked') == null) {
             document.getElementById('contenedorTemas').classList.add('invalid');
-            errorTemas.innerHTML = 'Seleccione por lo menos una opcion.'
+            errorTemas.innerHTML = 'Seleccione por lo menos una opcion.';
             return false;
-        }
-        else {
+        } else {
             document.getElementById('contenedorTemas').classList.remove('invalid');
             errorTemas.innerHTML = "";
         }
 
+
+
         //Validacion Pais ----------------------------------------------------------
         if (document.getElementById('paisInput').value == "") {
             document.getElementById('paisInput').classList.add('invalid');
-            errorPais.innerHTML = 'Seleccione un país.'
+            errorPais.innerHTML = 'Seleccione un país.';
             return false;
-        }
-        else {
+        } else {
             document.getElementById('paisInput').classList.remove('invalid');
             errorSexo.innerHTML = "";
         }
 
     }
-
-
 
 };
 

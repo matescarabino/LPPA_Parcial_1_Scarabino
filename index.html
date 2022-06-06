@@ -15,12 +15,12 @@
     
         <section>
             <nav class="navbar">
-                <a href="#">Inicio</a>
-                <a href="#">Formulario</a>
-                <a href="#">Sobre Nosotros</a>
+                <a href="index.html">Inicio</a>
+                <a href="#formulario">Formulario</a>
+                <a href="#nosotros">Nosotros</a>
             </nav>
-    
-            <form class="card" name="formulario">
+            <div></div>
+            <form class="card" name="formulario" id="formulario">
                 <h2 class="card__title">Formulario de Registro</h2>
         
                 <div class="card__campo">
@@ -49,43 +49,50 @@
 
                 <!-- Sexo -->
 
-                <div class="card__campo">
+                <div class="card__campo_big">
                     <label class="card__campo__label" for="Sexo">Sexo</label>
                     <div class="card__campo__options" id="sexoInput">
-                            <input type="radio" name="sexo" value="Masculino">
-                            <label class="card__campo__label_checkbox">Masculino</label>
+                        <div class="card__campo__label__options">
+                            <label>Masculino</label>
+                            <input type="radio"  name="sexo" value="Masculino">
+                        </div>
+                        <div class="card__campo__label__options">
+                            <label>Femenino</label>
                             <input type="radio" name="sexo" value="Femenino">
-                            <label class="card__campo__label_checkbox">Femenino</label>
+                        </div>
+                        <div class="card__campo__label__options">
+                            <label>Otros</label>
                             <input type="radio" name="sexo" value="Otros"> 
-                            <label class="card__campo__label_checkbox">Otros</label>
+                        </div>
+                        <div class="card__campo__label__options"></div>
                     </div>
                     <div class="card__campo__error" id="errorSexo"></div>
                 </div>
 
                 <!-- Temas de Interés -->
 
-                <div class="card__campo">
+                <div class="card__campo_big">
                     <label class="card__campo__label">Temas de Interés</label>
                     <div class="card__checkbox" id="contenedorTemas">
                         <div class="card__campo_checkbox">
-                            <input class="card__campo__input_checkbox" name="interes" type="checkbox" id="temas_de_interesInput_Deporte" value="deporte">
                             <label class="card__campo__label_checkbox" for="deporte">Deporte</label>
+                            <input class="card__campo__input_checkbox" name="interes" type="checkbox" id="temas_de_interesInput_Deporte" value="deporte">
                         </div>
                         <div class="card__campo_checkbox">
-                            <input class="card__campo__input_checkbox" name="interes" type="checkbox" id="temas_de_interesInput_Musica" value="musica">
                             <label class="card__campo__label_checkbox" for="musica">Música</label>
+                            <input class="card__campo__input_checkbox" name="interes" type="checkbox" id="temas_de_interesInput_Musica" value="musica">
                         </div>
                         <div class="card__campo_checkbox">
-                            <input class="card__campo__input_checkbox" name="interes" type="checkbox" id="temas_de_interesInput_Juegos" value="juegos">
                             <label class="card__campo__label_checkbox" for="juegos">Juegos</label>
+                            <input class="card__campo__input_checkbox" name="interes" type="checkbox" id="temas_de_interesInput_Juegos" value="juegos">
                         </div>
                         <div class="card__campo_checkbox">
-                            <input class="card__campo__input_checkbox" name="interes" type="checkbox" id="temas_de_interesInput_Tecnologia" value="tecnologia">
                             <label class="card__campo__label_checkbox" for="tecnologia">Tecnología</label>
+                            <input class="card__campo__input_checkbox" name="interes" type="checkbox" id="temas_de_interesInput_Tecnologia" value="tecnologia">
                         </div>
                         <div class="card__campo_checkbox">
-                            <input class="card__campo__input_checkbox" name="interes" type="checkbox" id="temas_de_interesInput_Otros" value="otros">
                             <label class="card__campo__label_checkbox" for="otros">Otros</label>
+                            <input class="card__campo__input_checkbox" name="interes" type="checkbox" id="temas_de_interesInput_Otros" value="otros">
                         </div>
                         <div class="card__campo_checkbox">
                             <label class="card__campo__label_checkbox" for="."></label>
@@ -96,7 +103,7 @@
 
                 <!-- Pais -->
 
-                <div class="card__campo">
+                <div class="card__campo_big">
                     <label class="card__campo__label" id="s" for="Pais">País</label>
                     <select class="card__campo__input" id="paisInput">
                         <option value="" selected disabled>-- Elije un País --</option>
@@ -108,21 +115,21 @@
                     <div class="card__campo__error" id="errorPais"></div>
                 </div>
 
-                <div class="card__campo">
+                <div class="card__campo_big">
                     <label class= "card__campo__label" for="comentario">Comentario</label>
                     <textarea class= "card__campo__input" type="text" id="comentarioInput"></textarea>
                 </div>
 
                 <div class="card__button">
-                    <button>Submit</button>
+                    <button>Enviar</button>
                 </div>
-        
             </form>
-
+            <div></div>
+            <div class="centrar"></div>
         </section>
-    
-        <footer>
-            <p>Footer</p>
+
+        <footer id="nosotros">
+            <p>Parcial 1 Scarabino 2022</p>
         </footer>
     
         <script src="./js/main.js"></script>
