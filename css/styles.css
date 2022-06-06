@@ -212,7 +212,6 @@ section {
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
-    
 }
 
 .card__button {
@@ -261,13 +260,14 @@ footer p{
 
     section {
         flex-direction: row;
-        justify-content: space-between;
-        text-align: center;
-
+        justify-content: center;
     }
 
     .navbar {
         width: 200px;
+        height: 100%;
+        position:absolute;
+        left: 0;
         border-right: 1px solid black;
         border-bottom: none;
     }
@@ -280,11 +280,11 @@ footer p{
 
     .card{
         width: 768px;
+        position: relative;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-around;
         margin:10px;
-        
     }
     .card__campo {
         width: 45%;
@@ -325,40 +325,65 @@ footer p{
     }
 }
 
-/* The Modal (background) */
+/*==================Modal ==================*/
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
+    display: none;
+    position: fixed; 
+    z-index: 1; 
     left: 0;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
   }
   
-  /* Modal Content/Box */
-  .modal-content {
+  .modal_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    text-align: center;
     background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
+    margin: 15% auto;
+    padding: 10px;
     border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
+    width: 60%;
   }
-  
-  /* The Close Button */
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
+ 
+.modal_message {
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-self:center ;
+    margin-bottom: 10px;
+    background-color: #007282;
+    color: #fff;
+    padding: 10px;
+    font-size: 40px;
+}
+  .modal_close {
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-self:center ;
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
     font-weight: bold;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
+    color: #007282;
+    background-color: #fff;
+    border: 2px solid #007282;
+    transition: all 0.3s ease 0s;
     cursor: pointer;
+    outline: none;
   }
+
+  .modal_content p:hover {
+    color: #fff;
+    background-color: #007282;
+}
+
+

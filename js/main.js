@@ -137,29 +137,10 @@ window.onload = function () {
             document.getElementById('sexoInput').classList.add('invalid');
             errorSexo.innerHTML = 'Seleccione una opcion.';
             return false;
-        } else {
-            document.getElementById('sexoInput').classList.remove('invalid');
-            errorSexo.innerHTML = "";
-        }
-        //Validacion Sexo ----------------------------------------------------------
-        // let sexo_seleccionado = false;
-        // let array_sexo = formulario.querySelectorAll("input[name='sexo']");
-
-        // array_sexo.forEach(element => {
-        //     if (element.checked == true) {
-        //         sexo_seleccionado = true;
-        //     }
-        // });
-
-        // if (sexo_seleccionado == false) {
-        //     document.getElementById('sexoInput').classList.add('invalid');
-        //     errorSexo.innerHTML = 'Seleccione una opcion.';
-        //     return false;
-        // } else {
-        //     document.getElementById('sexoInput').classList.remove('invalid');
-        //     errorSexo.innerHTML = "";
-        // }
-
+        } 
+        document.getElementById('sexoInput').classList.remove('invalid');
+        errorSexo.innerHTML = "";
+        
 
         //Validacion interes ----------------------------------------------------------
 
@@ -167,38 +148,36 @@ window.onload = function () {
             document.getElementById('contenedorTemas').classList.add('invalid');
             errorTemas.innerHTML = 'Seleccione por lo menos una opcion.';
             return false;
-        } else {
-            document.getElementById('contenedorTemas').classList.remove('invalid');
-            errorTemas.innerHTML = "";
         }
+        document.getElementById('contenedorTemas').classList.remove('invalid');
+        errorTemas.innerHTML = "";
+        
 
         //Validacion Pais ----------------------------------------------------------
         if (document.getElementById('paisInput').value == "") {
             document.getElementById('paisInput').classList.add('invalid');
             errorPais.innerHTML = 'Seleccione un país.';
             return false;
-        } else {
-            document.getElementById('paisInput').classList.remove('invalid');
-            errorSexo.innerHTML = "";
+        } 
+        document.getElementById('paisInput').classList.remove('invalid');
+        errorSexo.innerHTML = "";
 
-        }
+    
 
-        // Get the modal
-        var modal = document.getElementById("myModal");
+        // Ejecuto modal -----------------------------------------------------------
+        let modal = document.getElementById("modalRegistro");
+        let span = document.getElementById("close");
 
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementById("close");
-
+        // Lo hago visible
         modal.style.display = "block";
         
-        // When the user clicks on <span> (x), close the modal
+        // Si clickea el "boton" de aceptar escondo el modal
         span.onclick = function() {
             modal.style.display = "none";
             document.getElementById("formulario").submit();
         }
         
-        // When the user clicks anywhere outside of the modal, close it
+        // Si clickea fuera del modal, lo escondo
         window.onclick = function(event) {
             if (event.target == modal) {
             modal.style.display = "none";
