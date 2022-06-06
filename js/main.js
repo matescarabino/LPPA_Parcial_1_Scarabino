@@ -1,6 +1,7 @@
 window.onload = function () {
 
     validacionesOnFocus();
+    
 
     function validacionesOnFocus() {
         //Validacion Nombre --------------------------------------------------------------------
@@ -73,21 +74,16 @@ window.onload = function () {
                 errorEdad.innerHTML = "";
             }
         };
-        
-        //Validacion Sexo ----------------------------------------------------------
-        let y = document.getElementById('sexo');
-        console.log(y)
-        y.addEventListener('change', function(){
-            document.getElementById('sexoInput').classList.remove('invalid');
-            errorSexo.innerHTML = "";
-        })
 
         //Validacion Sexo ----------------------------------------------------------
-        // let x = document.querySelector('.card__campo__input_checkbox:checked');
-        // x.addEventListener('change', function(){
-        // document.getElementById('sexoInput').classList.remove('invalid');
-        // errorSexo.innerHTML = "";
+        // let y = document.getElementById('sexo');
+        // console.log(y)
+        // y.addEventListener('change', function(){
+        //     document.getElementById('sexoInput').classList.remove('invalid');
+        //     errorSexo.innerHTML = "";
         // })
+
+
 
     }
 
@@ -97,7 +93,6 @@ window.onload = function () {
     //Validaciones on Submit --------------------------------------------------------------------
     document.formulario.onsubmit = function () {
 
-
         //Validacion Nombre --------------------------------------------------------------------
         let nombre = document.getElementById('nombreInput');
         let name_format = /^[a-zA-Z]+$/;
@@ -105,17 +100,7 @@ window.onload = function () {
         if ((nombre.value.length < 3) || (!nombre.value.match(name_format) || (nombre.value == ""))) {
             nombre.classList.add('invalid');
             errorNombre.innerHTML = 'Ingrese un nombre no menor a 3 letras.'
-            return false;
-        }
-
-        //Validacion sexo ----------------------------------------------------------
-        if (formulario.sexo[0].checked == false && formulario.sexo[1].checked == false && formulario.sexo[2].checked == false) {
-            document.getElementById('sexoInput').classList.add('invalid');
-            errorSexo.innerHTML = 'Seleccione una opcion.';
-            return false;
-        } else {
-            document.getElementById('sexoInput').classList.remove('invalid');
-            errorSexo.innerHTML = "";
+            return false; //se utiliza para abortar la funcion
         }
 
         //Validacion Apellido --------------------------------------------------------------------
@@ -149,6 +134,33 @@ window.onload = function () {
             return false;
         }
 
+        //Validacion sexo ----------------------------------------------------------
+        if (formulario.sexo[0].checked == false && formulario.sexo[1].checked == false && formulario.sexo[2].checked == false) {
+            document.getElementById('sexoInput').classList.add('invalid');
+            errorSexo.innerHTML = 'Seleccione una opcion.';
+            return false;
+        } else {
+            document.getElementById('sexoInput').classList.remove('invalid');
+            errorSexo.innerHTML = "";
+        }
+        //Validacion Sexo ----------------------------------------------------------
+        // let sexo_seleccionado = false;
+        // let array_sexo = formulario.querySelectorAll("input[name='sexo']");
+
+        // array_sexo.forEach(element => {
+        //     if (element.checked == true) {
+        //         sexo_seleccionado = true;
+        //     }
+        // });
+
+        // if (sexo_seleccionado == false) {
+        //     document.getElementById('sexoInput').classList.add('invalid');
+        //     errorSexo.innerHTML = 'Seleccione una opcion.';
+        //     return false;
+        // } else {
+        //     document.getElementById('sexoInput').classList.remove('invalid');
+        //     errorSexo.innerHTML = "";
+        // }
 
 
         //Validacion interes ----------------------------------------------------------
@@ -162,8 +174,6 @@ window.onload = function () {
             errorTemas.innerHTML = "";
         }
 
-
-
         //Validacion Pais ----------------------------------------------------------
         if (document.getElementById('paisInput').value == "") {
             document.getElementById('paisInput').classList.add('invalid');
@@ -172,9 +182,11 @@ window.onload = function () {
         } else {
             document.getElementById('paisInput').classList.remove('invalid');
             errorSexo.innerHTML = "";
+
         }
 
     }
+
 
 };
 

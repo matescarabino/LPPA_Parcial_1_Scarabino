@@ -1,138 +1,145 @@
 <!DOCTYPE html>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./css/styles.css">
-        <title>LPPA_Parcial_1_Scarabino</title>
-    </head>
 
-    <body>
-        <header>
-            <h1>parcial 1 scarabino</h1>
-        </header>
-    
-        <section>
-            <nav class="navbar">
-                <a href="index.html">Inicio</a>
-                <a href="#formulario">Formulario</a>
-                <a href="#nosotros">Nosotros</a>
-            </nav>
-            <div></div>
-            <form class="card" name="formulario" id="formulario">
-                <h2 class="card__title">Formulario de Registro</h2>
-        
-                <div class="card__campo">
-                    <label class= "card__campo__label" for="Nombre">Nombre</label>
-                    <input class= "card__campo__input" type="text" id="nombreInput">
-                    <div class= "card__campo__error" id="errorNombre" ></div>
-                </div>
-        
-                <div class="card__campo">
-                    <label class= "card__campo__label" for="Apellido">Apellido</label>
-                    <input class= "card__campo__input" type="text" id="apellidoInput">
-                    <div class= "card__campo__error" id="errorApellido" ></div>
-                </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>LPPA_Parcial_1_Scarabino</title>
+</head>
 
-                <div class="card__campo">
-                    <label class= "card__campo__label" for="Email">Email</label>
-                    <input class= "card__campo__input" type="text" id="emailInput">
-                    <div class= "card__campo__error" id="errorMail" ></div> 
-                </div>
+<body>
+    <header>
+        <h1>parcial 1 scarabino</h1>
+    </header>
 
-                <div class="card__campo">
-                    <label class= "card__campo__label" for="Edad">Edad</label>
-                    <input class= "card__campo__input" type="text" id="edadInput">
-                    <div class= "card__campo__error" id="errorEdad" ></div>
-                </div>
+    <section>
+        <nav class="navbar">
+            <a href="index.html">Inicio</a>
+            <a href="#formulario">Formulario</a>
+            <a href="#nosotros">Nosotros</a>
+        </nav>
+        <div></div>
+        <form class="card" name="formulario" id="formulario">
+            <h2 class="card__title">Formulario de Registro</h2>
 
-                <!-- Sexo -->
+            <div class="card__campo">
+                <label class="card__campo__label" for="Nombre">Nombre</label>
+                <input class="card__campo__input" type="text" id="nombreInput">
+                <div class="card__campo__error" id="errorNombre"></div>
+            </div>
 
-                <div class="card__campo_big">
-                    <label class="card__campo__label" for="Sexo">Sexo</label>
-                    <div class="card__campo__options" id="sexoInput">
-                        <div class="card__campo__label__options">
-                            <label>Masculino</label>
-                            <input type="radio"  name="sexo" value="Masculino">
-                        </div>
-                        <div class="card__campo__label__options">
-                            <label>Femenino</label>
-                            <input type="radio" name="sexo" value="Femenino">
-                        </div>
-                        <div class="card__campo__label__options">
-                            <label>Otros</label>
-                            <input type="radio" name="sexo" value="Otros"> 
-                        </div>
-                        <div class="card__campo__label__options"></div>
+            <div class="card__campo">
+                <label class="card__campo__label" for="Apellido">Apellido</label>
+                <input class="card__campo__input" type="text" id="apellidoInput">
+                <div class="card__campo__error" id="errorApellido"></div>
+            </div>
+
+            <div class="card__campo">
+                <label class="card__campo__label" for="Email">Email</label>
+                <input class="card__campo__input" type="text" id="emailInput">
+                <div class="card__campo__error" id="errorMail"></div>
+            </div>
+
+            <div class="card__campo">
+                <label class="card__campo__label" for="Edad">Edad</label>
+                <input class="card__campo__input" type="text" id="edadInput">
+                <div class="card__campo__error" id="errorEdad"></div>
+            </div>
+
+            <!-- Sexo -->
+
+            <div class="card__campo_big">
+                <label class="card__campo__label" for="Sexo">Sexo</label>
+                <div class="card__campo__options" id="sexoInput">
+                    <div class="card__campo__label__options">
+                        <label>Masculino</label>
+                        <input type="radio" name="sexo" value="Masculino">
                     </div>
-                    <div class="card__campo__error" id="errorSexo"></div>
-                </div>
-
-                <!-- Temas de Interés -->
-
-                <div class="card__campo_big">
-                    <label class="card__campo__label">Temas de Interés</label>
-                    <div class="card__checkbox" id="contenedorTemas">
-                        <div class="card__campo_checkbox">
-                            <label class="card__campo__label_checkbox" for="deporte">Deporte</label>
-                            <input class="card__campo__input_checkbox" name="interes" type="checkbox" id="temas_de_interesInput_Deporte" value="deporte">
-                        </div>
-                        <div class="card__campo_checkbox">
-                            <label class="card__campo__label_checkbox" for="musica">Música</label>
-                            <input class="card__campo__input_checkbox" name="interes" type="checkbox" id="temas_de_interesInput_Musica" value="musica">
-                        </div>
-                        <div class="card__campo_checkbox">
-                            <label class="card__campo__label_checkbox" for="juegos">Juegos</label>
-                            <input class="card__campo__input_checkbox" name="interes" type="checkbox" id="temas_de_interesInput_Juegos" value="juegos">
-                        </div>
-                        <div class="card__campo_checkbox">
-                            <label class="card__campo__label_checkbox" for="tecnologia">Tecnología</label>
-                            <input class="card__campo__input_checkbox" name="interes" type="checkbox" id="temas_de_interesInput_Tecnologia" value="tecnologia">
-                        </div>
-                        <div class="card__campo_checkbox">
-                            <label class="card__campo__label_checkbox" for="otros">Otros</label>
-                            <input class="card__campo__input_checkbox" name="interes" type="checkbox" id="temas_de_interesInput_Otros" value="otros">
-                        </div>
-                        <div class="card__campo_checkbox">
-                            <label class="card__campo__label_checkbox" for="."></label>
-                        </div>
+                    <div class="card__campo__label__options">
+                        <label>Femenino</label>
+                        <input type="radio" name="sexo" value="Femenino">
                     </div>
-                    <div class="card__campo__error" id="errorTemas"></div>
+                    <div class="card__campo__label__options">
+                        <label>Otros</label>
+                        <input type="radio" name="sexo" value="Otros">
+                    </div>
+                    <div class="card__campo__label__options"></div>
                 </div>
+                <div class="card__campo__error" id="errorSexo"></div>
+            </div>
 
-                <!-- Pais -->
+            <!-- Temas de Interés -->
 
-                <div class="card__campo_big">
-                    <label class="card__campo__label" id="s" for="Pais">País</label>
-                    <select class="card__campo__input" id="paisInput">
-                        <option value="" selected disabled>-- Elije un País --</option>
-                        <option value="argentina">Argentina</option>
-                        <option value="chile">Chile</option>
-                        <option value="brasil">Brasil</option>
-                        <option value="uruguay">Uruguay</option>
-                    </select>
-                    <div class="card__campo__error" id="errorPais"></div>
+            <div class="card__campo_big">
+                <label class="card__campo__label">Temas de Interés</label>
+                <div class="card__checkbox" id="contenedorTemas">
+                    <div class="card__campo_checkbox">
+                        <label class="card__campo__label_checkbox" for="deporte">Deporte</label>
+                        <input class="card__campo__input_checkbox" name="interes" type="checkbox"
+                            id="temas_de_interesInput_Deporte" value="deporte">
+                    </div>
+                    <div class="card__campo_checkbox">
+                        <label class="card__campo__label_checkbox" for="musica">Música</label>
+                        <input class="card__campo__input_checkbox" name="interes" type="checkbox"
+                            id="temas_de_interesInput_Musica" value="musica">
+                    </div>
+                    <div class="card__campo_checkbox">
+                        <label class="card__campo__label_checkbox" for="juegos">Juegos</label>
+                        <input class="card__campo__input_checkbox" name="interes" type="checkbox"
+                            id="temas_de_interesInput_Juegos" value="juegos">
+                    </div>
+                    <div class="card__campo_checkbox">
+                        <label class="card__campo__label_checkbox" for="tecnologia">Tecnología</label>
+                        <input class="card__campo__input_checkbox" name="interes" type="checkbox"
+                            id="temas_de_interesInput_Tecnologia" value="tecnologia">
+                    </div>
+                    <div class="card__campo_checkbox">
+                        <label class="card__campo__label_checkbox" for="otros">Otros</label>
+                        <input class="card__campo__input_checkbox" name="interes" type="checkbox"
+                            id="temas_de_interesInput_Otros" value="otros">
+                    </div>
+                    <div class="card__campo_checkbox">
+                        <label class="card__campo__label_checkbox" for="."></label>
+                    </div>
                 </div>
+                <div class="card__campo__error" id="errorTemas"></div>
+            </div>
 
-                <div class="card__campo_big">
-                    <label class= "card__campo__label" for="comentario">Comentario</label>
-                    <textarea class= "card__campo__input" type="text" id="comentarioInput"></textarea>
-                </div>
+            <!-- Pais -->
 
-                <div class="card__button">
-                    <button>Enviar</button>
-                </div>
-            </form>
-            <div></div>
-            <div class="centrar"></div>
-        </section>
+            <div class="card__campo_big">
+                <label class="card__campo__label" id="s" for="Pais">País</label>
+                <select class="card__campo__input" id="paisInput">
+                    <option value="" selected disabled>-- Elije un País --</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="chile">Chile</option>
+                    <option value="brasil">Brasil</option>
+                    <option value="uruguay">Uruguay</option>
+                </select>
+                <div class="card__campo__error" id="errorPais"></div>
+            </div>
 
-        <footer id="nosotros">
-            <p>Parcial 1 Scarabino 2022</p>
-        </footer>
-    
-        <script src="./js/main.js"></script>
-    </body>
+            <div class="card__campo_big">
+                <label class="card__campo__label" for="comentario">Comentario</label>
+                <textarea class="card__campo__input" type="text" id="comentarioInput"></textarea>
+            </div>
 
-</html>    
+            <div class="card__button">
+                <button id="myBtn">Enviar</button>
+            </div>
+
+        </form>
+        <div></div>
+        <div class="centrar"></div>
+    </section>
+
+    <footer id="nosotros">
+        <p>Parcial 1 Scarabino 2022</p>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
