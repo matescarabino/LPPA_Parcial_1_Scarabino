@@ -20,132 +20,133 @@
             <a href="#formulario">Formulario</a>
             <a href="#nosotros">Nosotros</a>
         </nav>
-        <form class="card" name="formulario" id="formulario">
-            <h2 class="card__title">Formulario de Registro</h2>
+        <div class="contenido">
+            <form class="card" name="formulario" id="formulario">
+                <h2 class="card__title">Formulario de Registro</h2>
 
-            <div class="card__campo">
-                <label class="card__campo__label" for="Nombre">Nombre</label>
-                <input class="card__campo__input" type="text" id="nombreInput">
-                <div class="card__campo__error" id="errorNombre"></div>
-            </div>
-
-            <div class="card__campo">
-                <label class="card__campo__label" for="Apellido">Apellido</label>
-                <input class="card__campo__input" type="text" id="apellidoInput">
-                <div class="card__campo__error" id="errorApellido"></div>
-            </div>
-
-            <div class="card__campo">
-                <label class="card__campo__label" for="Email">Email</label>
-                <input class="card__campo__input" type="text" id="emailInput">
-                <div class="card__campo__error" id="errorMail"></div>
-            </div>
-
-            <div class="card__campo">
-                <label class="card__campo__label" for="Edad">Edad</label>
-                <input class="card__campo__input" type="text" id="edadInput">
-                <div class="card__campo__error" id="errorEdad"></div>
-            </div>
-
-            <!-- Sexo -->
-
-            <div class="card__campo_big">
-                <label class="card__campo__label" for="Sexo">Sexo</label>
-                <div class="card__campo__options" id="sexoInput">
-                    <div class="card__campo__label__options">
-                        <label>Masculino</label>
-                        <input type="radio" name="sexo" value="Masculino">
-                    </div>
-                    <div class="card__campo__label__options">
-                        <label>Femenino</label>
-                        <input type="radio" name="sexo" value="Femenino">
-                    </div>
-                    <div class="card__campo__label__options">
-                        <label>Otros</label>
-                        <input type="radio" name="sexo" value="Otros">
-                    </div>
-                    <div class="card__campo__label__options"></div>
+                <div class="card__campo">
+                    <label class="card__campo__label" for="Nombre">Nombre</label>
+                    <input class="card__campo__input" type="text" id="nombreInput">
+                    <div class="card__campo__error" id="errorNombre">&nbsp;</div>
                 </div>
-                <div class="card__campo__error" id="errorSexo"></div>
-            </div>
 
-            <!-- Temas de Interés -->
-
-            <div class="card__campo_big">
-                <label class="card__campo__label">Temas de Interés</label>
-                <div class="card__checkbox" id="contenedorTemas">
-                    <div class="card__campo_checkbox">
-                        <label class="card__campo__label_checkbox" for="deporte">Deporte</label>
-                        <input class="card__campo__input_checkbox" name="interes" type="checkbox"
-                            id="temas_de_interesInput_Deporte" value="deporte">
-                    </div>
-                    <div class="card__campo_checkbox">
-                        <label class="card__campo__label_checkbox" for="musica">Música</label>
-                        <input class="card__campo__input_checkbox" name="interes" type="checkbox"
-                            id="temas_de_interesInput_Musica" value="musica">
-                    </div>
-                    <div class="card__campo_checkbox">
-                        <label class="card__campo__label_checkbox" for="juegos">Juegos</label>
-                        <input class="card__campo__input_checkbox" name="interes" type="checkbox"
-                            id="temas_de_interesInput_Juegos" value="juegos">
-                    </div>
-                    <div class="card__campo_checkbox">
-                        <label class="card__campo__label_checkbox" for="tecnologia">Tecnología</label>
-                        <input class="card__campo__input_checkbox" name="interes" type="checkbox"
-                            id="temas_de_interesInput_Tecnologia" value="tecnologia">
-                    </div>
-                    <div class="card__campo_checkbox">
-                        <label class="card__campo__label_checkbox" for="otros">Otros</label>
-                        <input class="card__campo__input_checkbox" name="interes" type="checkbox"
-                            id="temas_de_interesInput_Otros" value="otros">
-                    </div>
-                    <div class="card__campo_checkbox">
-                        <label class="card__campo__label_checkbox" for="."></label>
-                    </div>
+                <div class="card__campo">
+                    <label class="card__campo__label" for="Apellido">Apellido</label>
+                    <input class="card__campo__input" type="text" id="apellidoInput">
+                    <div class="card__campo__error" id="errorApellido">&nbsp;</div>
                 </div>
-                <div class="card__campo__error" id="errorTemas"></div>
-            </div>
 
-            <!-- Pais -->
+                <div class="card__campo">
+                    <label class="card__campo__label" for="Email">Email</label>
+                    <input class="card__campo__input" type="text" id="emailInput">
+                    <div class="card__campo__error" id="errorMail">&nbsp;</div>
+                </div>
 
-            <div class="card__campo_big">
-                <label class="card__campo__label" id="s" for="Pais">País</label>
-                <select class="card__campo__input" id="paisInput">
-                    <option value="" selected disabled>-- Elije un País --</option>
-                    <option value="argentina">Argentina</option>
-                    <option value="chile">Chile</option>
-                    <option value="brasil">Brasil</option>
-                    <option value="uruguay">Uruguay</option>
-                </select>
-                <div class="card__campo__error" id="errorPais"></div>
-            </div>
+                <div class="card__campo">
+                    <label class="card__campo__label" for="Edad">Edad</label>
+                    <input class="card__campo__input" type="text" id="edadInput">
+                    <div class="card__campo__error" id="errorEdad">&nbsp;</div>
+                </div>
 
-            <div class="card__campo_big">
-                <label class="card__campo__label" for="comentario">Comentario</label>
-                <textarea class="card__campo__input" type="text" id="comentarioInput"></textarea>
-            </div>
+                <!-- Sexo -->
 
-            <div class="card__button">
-                <button>Enviar</button>
-            </div>
+                <div class="card__campo_big">
+                    <label class="card__campo__label" for="Sexo">Sexo</label>
+                    <div class="card__campo__options" id="sexoInput">
+                        <div class="card__campo__label__options">
+                            <label>Masculino</label>
+                            <input type="radio" name="sexo" value="Masculino">
+                        </div>
+                        <div class="card__campo__label__options">
+                            <label>Femenino</label>
+                            <input type="radio" name="sexo" value="Femenino">
+                        </div>
+                        <div class="card__campo__label__options">
+                            <label>Otros</label>
+                            <input type="radio" name="sexo" value="Otros">
+                        </div>
+                        <div class="card__campo__label__options"></div>
+                    </div>
+                    <div class="card__campo__error" id="errorSexo"></div>
+                </div>
 
-        </form>
+                <!-- Temas de Interés -->
 
+                <div class="card__campo_big">
+                    <label class="card__campo__label">Temas de Interés</label>
+                    <div class="card__checkbox" id="contenedorTemas">
+                        <div class="card__campo_checkbox">
+                            <label class="card__campo__label_checkbox" for="deporte">Deporte</label>
+                            <input class="card__campo__input_checkbox" name="interes" type="checkbox"
+                                id="temas_de_interesInput_Deporte" value="deporte">
+                        </div>
+                        <div class="card__campo_checkbox">
+                            <label class="card__campo__label_checkbox" for="musica">Música</label>
+                            <input class="card__campo__input_checkbox" name="interes" type="checkbox"
+                                id="temas_de_interesInput_Musica" value="musica">
+                        </div>
+                        <div class="card__campo_checkbox">
+                            <label class="card__campo__label_checkbox" for="juegos">Juegos</label>
+                            <input class="card__campo__input_checkbox" name="interes" type="checkbox"
+                                id="temas_de_interesInput_Juegos" value="juegos">
+                        </div>
+                        <div class="card__campo_checkbox">
+                            <label class="card__campo__label_checkbox" for="tecnologia">Tecnología</label>
+                            <input class="card__campo__input_checkbox" name="interes" type="checkbox"
+                                id="temas_de_interesInput_Tecnologia" value="tecnologia">
+                        </div>
+                        <div class="card__campo_checkbox">
+                            <label class="card__campo__label_checkbox" for="otros">Otros</label>
+                            <input class="card__campo__input_checkbox" name="interes" type="checkbox"
+                                id="temas_de_interesInput_Otros" value="otros">
+                        </div>
+                        <div class="card__campo_checkbox">
+                            <label class="card__campo__label_checkbox" for="."></label>
+                        </div>
+                    </div>
+                    <div class="card__campo__error" id="errorTemas"></div>
+                </div>
+
+                <!-- Pais -->
+
+                <div class="card__campo_big">
+                    <label class="card__campo__label" id="s" for="Pais">País</label>
+                    <select class="card__campo__input" id="paisInput">
+                        <option value="" selected disabled>-- Elige un País --</option>
+                        <option value="argentina">Argentina</option>
+                        <option value="chile">Chile</option>
+                        <option value="brasil">Brasil</option>
+                        <option value="uruguay">Uruguay</option>
+                    </select>
+                    <div class="card__campo__error" id="errorPais"></div>
+                </div>
+
+                <div class="card__campo_big">
+                    <label class="card__campo__label" for="comentario">Comentario</label>
+                    <textarea class="card__campo__input" type="text" id="comentarioInput"></textarea>
+                </div>
+
+                <div class="card__button">
+                    <button>Enviar</button>
+                </div>
+
+            </form>
+        </div>
     </section>
 
 
-        <!-- Modal -->
-        <div id="modalRegistro" class="modal">
+    <!-- Modal -->
+    <div id="modalRegistro" class="modal">
 
-            <div class="modal_content">
-                <p class="modal_message">Registro Exitoso</p>
-                <p class="modal_close" id="close">ACEPTAR</p>
-            </div>
-
+        <div class="modal_content">
+            <p class="modal_message">REGISTRO EXITOSO</p>
+            <p class="modal_close" id="close">ACEPTAR</p>
         </div>
 
+    </div>
+
     <footer id="nosotros">
-        <p>Parcial 1 Scarabino 2022</p>
+        <a href="https://matescarabino.github.io/CV/" target="_blank">SCARABINO MATEO</a>
     </footer>
 
 
